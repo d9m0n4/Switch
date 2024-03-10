@@ -1,0 +1,35 @@
+.switch {
+  display: flex;
+  background-color: #fff;
+  font-weight: 500;
+  border-radius: 16px;
+  &-items {
+    position: relative;
+    display: flex;
+    padding: 4px;
+    gap: 8px;
+    .highlight {
+      position: absolute;
+      background-color: #1ec6c6;
+      border-radius: 16px;
+      transition: width 0.350s ease, left 0.350s ease-in-out;
+    }
+  }
+  &-item {
+    padding: 8px 24px;
+    border-radius: 16px;
+    color: #1b132b;
+    background-color: transparent;
+    z-index: 3;
+    transition: color .350s ease-in-out;
+    &:hover {
+      cursor: pointer;
+    }
+    &.active {
+      color: #fff;
+      .highlight {
+        width: 100%;
+      }
+    }
+  }
+}
